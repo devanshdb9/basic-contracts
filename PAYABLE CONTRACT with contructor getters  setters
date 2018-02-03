@@ -3,7 +3,7 @@ contract Mycontract
 {
     uint myv;
     
-    function Mycontract()
+    function Mycontract() payable
     {
         myv=5;
     }

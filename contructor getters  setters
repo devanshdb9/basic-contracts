@@ -1,0 +1,21 @@
+pragma solidity ^0.4.0;
+contract Mycontract
+{
+    uint myv;
+    
+    function Mycontract()
+    {
+        myv=5;
+    }
+    
+    function setmyv(uint myvnew)
+    {
+        myv=myvnew;
+        
+        
+    }
+    function getmyv() constant returns(uint)
+    {
+        return myv;
+    }
+}

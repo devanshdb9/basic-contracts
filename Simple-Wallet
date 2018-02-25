@@ -17,8 +17,12 @@ contract SimpleWallet is mortal {
 
     function sendFunds(address receiver, uint amountInWei) public {
         require(myAddressMapping[msg.sender].isAllowed);
-        require(myAddressMapping[msg.sender].maxTransferAmount <= amountInWei);
+        require(myAddressMapping[msg.sender].maxTransferAmount >= amountInWei);
         receiver.transfer(amountInWei);
+    }
+    function removeAddressFromSendersList(Address theAddress)
+    {
+    delete permitedaddress[the Address];
     }
 
 
